@@ -1,9 +1,5 @@
 ESX = nil
 local IsDead = false
-
-
-
-
 local label = 
 [[ 
   //
@@ -30,7 +26,7 @@ local label =
   ||
   ||                                                
   ||  
-  ||           Created by 𝕯𝖊𝖗𝕰𝖈𝖍𝖙𝖊𝕴𝖆𝖓#7381
+  ||           Created by DerchteeIan
   ||]]
 
 
@@ -69,11 +65,6 @@ AddEventHandler("bulletproof", function()
 			if valid then
 				local playerPed = PlayerPedId()
 				isUsing = true
-				exports[Config.Progressbar]:startUI(5000)
-
-
-			
-
 				ESX.Streaming.RequestAnimDict(lib, function()
 					TaskPlayAnim(playerPed, lib, anim, 8.0, -8.0, -1, 0, 0, false, false, false)
 					Citizen.Wait(0)
@@ -104,11 +95,6 @@ AddEventHandler("bulletproof", function()
 		end)
 	end)
 end)
-
-
-
-
-
 
 RegisterCommand('bulletproof', function()
 	TriggerEvent('bulletproof')
